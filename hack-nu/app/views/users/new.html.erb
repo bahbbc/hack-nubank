@@ -1,0 +1,40 @@
+<div class="row" style="margin-top:40px">
+
+<div class="col-xs-12 text-center">
+<h1 class="titulo-principal" style="text-align:center; font-size:2.8em; margin-top:40px; font-weight:bold; color:#d75c37">Vamos te ajudar a se planejar!</h1>
+
+<%= form_for(@user) do |f| %>
+  <div class="form-group">
+    <label for="disabledTextInput">Quanto você ganha por mês?</label>
+    <%= f.text_field :monthly_income, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
+  </div>
+  <p>Se você quiser acelerar o processo e tornar tudo mais fácil, conecte a sua conta bancária:</p>
+  <a  class= 'btn btn-default navbar-btn' style="color:#7f7f7f; text-decoration:underline" href="">Conectar conta</a>
+  <a  class= 'btn btn-default navbar-btn' style="color:#7f7f7f; text-decoration:underline" href="">Não quero. Gosto de cadastrar todos os meus gastos um a um e não aproveitar esse tempo</a>
+  <h2> Ajude-nos a entender melhor o que você gosta mais de fazer. Enumere os itens mais importantes para você: </h2>
+  <div class="form-group">
+    <label for="disabledTextInput">Compras</label>
+    <%= f.text_field :shop, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
+    <label for="disabledTextInput">Bares/Restaurantes</label>
+    <%= f.text_field :bar, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
+    <label for="disabledTextInput">Presentes</label>
+    <%= f.text_field :gift, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
+    <label for="disabledTextInput">Educação</label>
+    <%= f.text_field :education, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
+    <label for="disabledTextInput">Saúde</label>
+    <%= f.text_field :health, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
+    <label for="disabledTextInput">Serviços</label>
+    <%= f.text_field :services, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
+    <label for="disabledTextInput">Transporte</label>
+    <%= f.text_field :transport, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
+    <label for="disabledTextInput">Lazer</label>
+    <%= f.text_field :leisure, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
+    <label for="disabledTextInput">Eletrônicos</label>
+    <%= f.text_field :electronics, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
+    <label for="disabledTextInput">Viagem</label>
+    <%= f.text_field :travel, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
+    <label for="disabledTextInput">Vestuário</label>
+    <%= f.text_field :dressing, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
+  </div>
+  <%= submit_tag 'Planejamento automático, aí vou eu!', class: "btn btn-primary", style:"background-color:#678fa9; border:none; margin-top:60px; width:55%; padding:13px; font-weight:bold; font-size:1.2em" %>
+<% end%>

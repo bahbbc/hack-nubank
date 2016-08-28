@@ -1,6 +1,6 @@
 class ObjectivesController < ApplicationController
   # GET /objectives/new
-  before_action :set_objective, only: [:show, :edit, :update, :update_amount]
+  before_action :set_objective, only: [:show, :edit, :update, :update_amount, :update_details]
 
   def create
     @objective = Objective.new
@@ -20,16 +20,10 @@ class ObjectivesController < ApplicationController
     redirect_to update_details_objective_path(@objective)
   end
 
-  def update_details
+  def update_details_automatic
     @objective = Objective.last
 
     @objective.update_attributes(details: params[:details])
-    #redirect_to update_amount_objective_path
-  end
-
-  def update_amount
-    @objective = Objective.last
-
     if @objective.name == 'Viajar'
       @objective.update_attributes(amount: 30_000)
     elsif @objective.name == 'Comprar um carro'
@@ -41,15 +35,28 @@ class ObjectivesController < ApplicationController
     else
       @objective.update_attributes(amount: params[:amount])
     end
+    #redirect_to update_amount_objective_path
+  end
+
+  def update_details
+    @objective = Objective.find params[:id]
   end
 
   def new
     @objective = Objective.new
   end
 
-  def add_credi_card
+  def add_credit_card
     @objective = Objective.new
   end
+  
+  def update
+    @objective = Objective.find params[:id]
+    if @objective.update(objective_params)
+      redirect_to new_user_path
+    end
+  end
+
   # GET /objectives
   # GET /objectives.json
   def index
@@ -77,13 +84,13 @@ class ObjectivesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_objective
-      @objective = Objective.last
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_objective
+    @objective = Objective.last
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def objective_params
-      params.require(:objective).permit(:name, :details, :amount, :time, :monthly_amount)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def objective_params
+    params.require(:objective).permit(:name, :details, :amount, :time, :monthly_amount)
+  end
 end

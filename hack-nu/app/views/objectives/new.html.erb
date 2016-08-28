@@ -1,15 +1,19 @@
-<h1 class="titulo-principal" style="text-align:center; font-size:3em">Qual seu maior sonho?</h1>
+<body style="background-color:#f2f2f2">
+  <h1 class="titulo-principal" style="text-align:center; font-size:2.8em; margin-top:40px; font-weight:bold; color:#d75c37">Qual seu maior sonho?</h1>
 
-<div class="row">
-  <div class="col-xs-12 text-center">
-    <%= form_for(@objective) do |f| %>
-      <div class="btn-group-vertical" role="group" aria-label="...">
-        <%= submit_tag 'Viajar', name: 'travel', class: 'btn btn-default navbar-btn' %>
-        <%= submit_tag 'Comprar um carro', name: 'car', class: 'btn btn-default navbar-btn' %>
-        <%= submit_tag 'Comprar um imóvel', name: 'house', class: 'btn btn-default navbar-btn' %>
-        <%= submit_tag 'Fazer faculdade', name: 'faculty', class: 'btn btn-default navbar-btn' %>
-        <%= submit_tag 'Outro', class: 'btn btn-default navbar-btn' %>
-      </div>
-    <% end %>
+  <div class="container" style="margin-top:40px">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <%= form_for(@objective) do |f| %>
+          <div class="btn-group-vertical" style="width:95%" role="group" aria-label="...">
+            <%= submit_tag 'Viajar', name: 'travel', class: 'btn btn-default navbar-btn', style:"margin-bottom:10px; background-color:#678fa9; color:white; border:none; padding:10px 0px; font-size:1.5em" %>
+            <%= submit_tag 'Comprar um carro', name: 'car', class: 'btn btn-default navbar-btn', style:"margin-bottom:10px; background-color:#678fa9; color:white; border:none; padding:10px 0px; font-size:1.5em" %>
+            <%= submit_tag 'Comprar um imóvel', name: 'house', class: 'btn btn-default navbar-btn', style:"margin-bottom:10px; background-color:#678fa9; color:white; border:none; padding:10px 0px; font-size:1.5em" %>
+            <%= submit_tag 'Fazer faculdade', name: 'faculty', class: 'btn btn-default navbar-btn', style:"margin-bottom:10px; background-color:#678fa9; color:white; border:none; padding:10px 0px; font-size:1.5em" %>
+            <%= submit_tag 'Outro', class: 'btn btn-default navbar-btn', style:"margin-bottom:10px; background-color:#678fa9; color:white; border:none; padding:10px 0px; font-size:1.5em" %>
+          </div>
+        </div>
+        <% end %>
+    </div>
   </div>
-</div>
+</body>

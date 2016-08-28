@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
-  root to: 'user#index', via: :get
+  resources :plannings
+
+  resources :account_data
+
+  root to: 'users#index', via: :get
+  resources :users
   resources :objectives do
     member do
       get 'update_amount'
       get 'update_details'
+      get 'update_details_automatic'
     end
   end
 
