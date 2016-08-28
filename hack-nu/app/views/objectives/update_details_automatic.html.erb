@@ -1,0 +1,62 @@
+<div class="row" id="principal" style="margin-top:100px">
+	<div class="col-xs-12 ">
+		<h1 class="center-block" style="text-align:center; font-size:2em">Valor médio aproximado:</h1>
+	</div>
+	<div class="col-xs-12" style="text-align:center; font-size:2em">
+		<form>
+			<% if( @objective.name == 'Viajar') %>
+				<div class="form-group">
+		      		<h2 style="font-size:1em; color:#605A5A">R$ 8.000,00</h2>
+		   	 	</div>
+	   	 	<% elsif( @objective.name == 'Comprar um carro') %>
+				<div class="form-group">
+		      		<h2>R$ 40.000,00</h2>
+		   	 	</div>
+	   	 	<% elsif( @objective.name == 'Comprar um imóvel') %>
+				<div class="form-group">
+		      		<h2>R$ 400.000,00</h2>
+		   	 	</div>
+	   	 	<% elsif( @objective.name == 'Fazer faculdade') %>
+				<div class="form-group">
+		      		<h2>R$ </h2>
+		   	 	</div>
+	   	 	<% elsif( @objective.name == 'Outro') %>
+				<div class="form-group">
+		      		<h2>R$ 10.000,00</h2>
+		   	 	</div>
+	   	 	<% end %>
+   	 		<div class="form-group">
+	      		<label for="disabledTextInput" style="font-size:1em">Você concorda?</label>
+	   	 	</div>
+	   	 	<div class="row">
+	   	 		<div class="col-xs-12 text-center">
+				   	<button id="idNao" class="btn btn-danger" type="button" onclick="exibirInput();" style="width:30%; border:none">Não</button>
+				   	<button type="submit" class="btn btn-primary" style="width:30%; background-color:#678fa9; border:none">Sim</button>
+			   	</div>
+			</div>
+   	 	</form>
+	</div>
+</div>
+
+<div class="row" style="margin-top:100px">	
+	<div class="col-xs-offset-3 col-xs-6 text-center">
+	<form>
+		<div class="form-group" id="exibirInput" style="display:none">
+      		<h1>Quanto voce acha que vai custar?</h1>
+      		<input type="text" id="disabledTextInput" class="form-control" placeholder="">
+      		<button type="submit" class="btn btn-primary" style="margin-top:10px">Continuar</button>		 
+	 	</div>
+ 	</form>
+</div>
+
+
+
+<script>
+function exibirInput()
+{
+	document.getElementById("exibirInput").style.display = "block";
+	document.getElementById("principal").style.display = "none";
+	principal
+}
+
+</script>
