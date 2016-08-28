@@ -31,7 +31,8 @@
         <div class="row">
           <div class="col-xs-12 text-center">
             <button id="idNao" class="btn btn-danger" type="button" onclick="exibirInput();" style="width:30%; border:none">Não</button>
-            <button type="submit" class="btn btn-primary" style="width:30%; background-color:#678fa9; border:none">Sim</button>
+            <%= link_to "Sim" , '/users/new', class: 'btn btn-primary', style: 'width:30%', border: 'none', background_color: '#678fa9'%>
+            
           </div>
       </div>
       </form>
