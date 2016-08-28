@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @account_datum.user_id %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @account_datum.amount %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @account_datum.category %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @account_datum.name %>
+</p>
+
+<%= link_to 'Edit', edit_account_datum_path(@account_datum) %> |
+<%= link_to 'Back', account_data_path %>

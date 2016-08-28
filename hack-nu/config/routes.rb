@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :account_data
+
   root to: 'user#index', via: :get
   resources :objectives do
     member do

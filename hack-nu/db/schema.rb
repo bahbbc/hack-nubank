@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160828015129) do
+ActiveRecord::Schema.define(version: 20160828054243) do
+
+  create_table "account_data", force: :cascade do |t|
+    t.float    "amount"
+    t.string   "category"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+  end
+
+  add_index "account_data", ["user_id"], name: "index_account_data_on_user_id"
 
   create_table "objectives", force: :cascade do |t|
     t.string   "name"

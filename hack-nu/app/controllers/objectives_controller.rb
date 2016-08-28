@@ -20,23 +20,17 @@ class ObjectivesController < ApplicationController
     redirect_to update_details_objective_path(@objective)
   end
 
-  def update_details
-    @objective = Objective.last
-
-    @objective.update_attributes(details: params[:details])
-    #redirect_to update_amount_objective_path
-  end
-  
   def update_details_automatic
     @objective = Objective.last
 
     @objective.update_attributes(details: params[:details])
     #redirect_to update_amount_objective_path
   end
-  
-  def update_amount
-    @objective = Objective.last
 
+  def update_details
+    @objective = Objective.find params[:id]
+    puts "=====================#{params}"
+    /@objective.update(objective_params)/
     if @objective.name == 'Viajar'
       @objective.update_attributes(amount: 30_000)
     elsif @objective.name == 'Comprar um carro'
@@ -48,10 +42,14 @@ class ObjectivesController < ApplicationController
     else
       @objective.update_attributes(amount: params[:amount])
     end
+    /redirect_to user_path/
   end
 
   def new
     @objective = Objective.new
+  end
+
+  def update
   end
 
   # GET /objectives

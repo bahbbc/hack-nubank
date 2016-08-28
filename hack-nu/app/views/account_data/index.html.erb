@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Account Data</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Amount</th>
+      <th>Category</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @account_data.each do |account_datum| %>
+      <tr>
+        <td><%= account_datum.user_id %></td>
+        <td><%= account_datum.amount %></td>
+        <td><%= account_datum.category %></td>
+        <td><%= account_datum.name %></td>
+        <td><%= link_to 'Show', account_datum %></td>
+        <td><%= link_to 'Edit', edit_account_datum_path(account_datum) %></td>
+        <td><%= link_to 'Destroy', account_datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Account datum', new_account_datum_path %>
