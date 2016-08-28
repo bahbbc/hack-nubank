@@ -5,23 +5,22 @@
 <table class="table">
   <thead class='list-group'>
     <tr>
+      <th scope="row">Nome</th>
       <th scope="row">Valor despesa</th>
       <th scope="row">Categoria</th>
-      <th scope="row">Nome</th>
     </tr>
   </thead>
 
   <tbody>
     <% @account_data.each do |account_datum| %>
       <tr>
+        <td><%= account_datum.name %></td>
         <td><%= account_datum.amount %></td>
         <td><%= account_datum.category %></td>
-        <td><%= account_datum.name %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Account datum', new_account_datum_path %>
+<%= link_to 'Voltar', plannings_path,class:'btn btn-danger' , style: "color:white; border:none; margin-top:60px; width:30%; padding:13px; font-weight:bold; font-size:1.2em" %>
