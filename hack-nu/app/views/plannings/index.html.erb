@@ -1,33 +1,7 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Meu planejamento</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Tipo|</th>
-      <th>Categoria|</th>
-      <th>Subcategoria|</th>
-      <th>Valor</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @plannings.each do |planning| %>
-      <tr>
-        <td><%= planning.name %></td>
-        <td><%= planning.category %></td>
-        <td><%= planning.subcategory %></td>
-        <td><%= planning.value %></td>
-        <td><%= link_to 'Show', planning %></td>
-        <td><%= link_to 'Edit', edit_planning_path(planning) %></td>
-        <td><%= link_to 'Destroy', planning, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Planning', new_planning_path %>
+<div class="container">
+  <div class="row">
+    <h1>Meu planejamento</h1>
+    <div class="col-xs-12 col-md-12">
+    </div>
+  </div>
+</div>
