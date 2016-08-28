@@ -49,7 +49,7 @@ class ObjectivesController < ApplicationController
   def update
     @objective = Objective.find params[:id]
     if @objective.update(objective_params)
-      redirect_to update_details_objective_path(@objective)
+      redirect_to new_user_path
     end
   end
 
