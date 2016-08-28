@@ -1,35 +1,13 @@
-<p id="notice"><%= notice %></p>
+<h1 class="titulo-principal">Qual seu maior sonho?</h1>
 
-<h1>Listing Objectives</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Details</th>
-      <th>Amount</th>
-      <th>Time</th>
-      <th>Monthly amount</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @objectives.each do |objective| %>
-      <tr>
-        <td><%= objective.name %></td>
-        <td><%= objective.details %></td>
-        <td><%= objective.amount %></td>
-        <td><%= objective.time %></td>
-        <td><%= objective.monthly_amount %></td>
-        <td><%= link_to 'Show', objective %></td>
-        <td><%= link_to 'Edit', edit_objective_path(objective) %></td>
-        <td><%= link_to 'Destroy', objective, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Objective', new_objective_path %>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="btn-group-vertical" role="group" aria-label="...">
+      <button type="button" class="btn btn-default navbar-btn">Viajar</button>
+      <button type="button" class="btn btn-default navbar-btn">Comprar um carro</button>
+      <button type="button" class="btn btn-default navbar-btn">Comprar um imóvel</button>
+      <button type="button" class="btn btn-default navbar-btn">Fazer faculdade</button>
+      <button type="button" class="btn btn-default navbar-btn">Outro</button>
+    </div>
+  </div>
+</div>
