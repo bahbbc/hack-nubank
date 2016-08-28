@@ -46,6 +46,10 @@ class ObjectivesController < ApplicationController
     @objective = Objective.new
   end
 
+  def add_credit_card
+    @objective = Objective.new
+  end
+  
   def update
     @objective = Objective.find params[:id]
     if @objective.update(objective_params)

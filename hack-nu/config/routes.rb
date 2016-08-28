@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       get 'update_amount'
       get 'update_details'
       get 'update_details_automatic'
+      get 'add_credit_card'
     end
   end
 
