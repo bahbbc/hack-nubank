@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   root to: 'user#index', via: :get
-  resources :objectives
+  resources :objectives do
+    member do
+      get 'update_amount'
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
