@@ -4,12 +4,12 @@
   <div class="col-xs-12 text-center">
     <%= form_for(@objective) do |f| %>
       <div class="btn-group-vertical" role="group" aria-label="...">
-        <%= f.submit 'Viajar', class: 'btn btn-default navbar-btn' %>
-        <%= f.submit 'Comprar um carro', name: 'car', class: 'btn btn-default navbar-btn' %>
-        <%= f.submit 'Comprar um imóvel', name: 'house', class: 'btn btn-default navbar-btn' %>
-        <%= f.submit 'Fazer faculdade', name: 'faculty', class: 'btn btn-default navbar-btn' %>
-        <%= f.submit 'Outro', class: 'btn btn-default navbar-btn' %>
+        <%= submit_tag 'Viajar', name: 'travel', class: 'btn btn-default navbar-btn' %>
+        <%= submit_tag 'Comprar um carro', name: 'car', class: 'btn btn-default navbar-btn' %>
+        <%= submit_tag 'Comprar um imóvel', name: 'house', class: 'btn btn-default navbar-btn' %>
+        <%= submit_tag 'Fazer faculdade', name: 'faculty', class: 'btn btn-default navbar-btn' %>
+        <%= submit_tag 'Outro', class: 'btn btn-default navbar-btn' %>
       </div>
-    </div>
     <% end %>
+  </div>
 </div>

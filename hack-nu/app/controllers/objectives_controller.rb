@@ -2,40 +2,49 @@ class ObjectivesController < ApplicationController
   # GET /objectives/new
   before_action :set_objective, only: [:show, :edit, :update, :update_amount]
 
-  def new
+  def create
     @objective = Objective.new
-    puts "------------------------#{params[:commit]}-------------------"
     if params[:travel]
-      @objective.name = 'travel'
+      @objective.name = 'Viajar'
     elsif params[:car]
-      @objective.name = 'car'
+      @objective.name = 'Comprar um carro'
     elsif params[:house]
-      @objective.name = 'house'
+      @objective.name = 'Comprar um imóvel'
     elsif params[:faculty]
-      @objective.name = 'faculty'
+      @objective.name = 'Fazer faculdade'
     else
-      @objective.name = 'other'
+      @objective.name = 'Outro'
     end
 
     @objective.save
     redirect_to update_details_objective_path(@objective)
   end
 
+  def update_details
+    @objective = Objective.last
+
+    @objective.update_attributes(details: params[:details])
+    #redirect_to update_amount_objective_path
+  end
+
   def update_amount
     @objective = Objective.last
 
-    if @objective.name == 'travel'
+    if @objective.name == 'Viajar'
       @objective.update_attributes(amount: 30_000)
-    elsif @objective.name == 'car'
+    elsif @objective.name == 'Comprar um carro'
       @objective.update_attributes(amount: 20_000)
-    elsif @objective.name == 'house'
+    elsif @objective.name == 'Comprar um imóvel'
       @objective.update_attributes(amount: 100_000)
-    elsif @objective.name == 'faculty'
+    elsif @objective.name == 'Fazer faculdade'
       @objective.update_attributes(amount: 200_000)
     else
       @objective.update_attributes(amount: params[:amount])
     end
+  end
 
+  def new
+    @objective = Objective.new
   end
 
   # GET /objectives
@@ -52,15 +61,6 @@ class ObjectivesController < ApplicationController
 
   # GET /objectives/1/edit
   def edit
-  end
-
-  # PATCH/PUT /objectives/1
-  # PATCH/PUT /objectives/1.json
-  def update_details
-    @objective = Objective.last
-
-    @objective.update_attributes(details: params[:details])
-    #redirect_to update_amount_objective_path
   end
 
   # DELETE /objectives/1
