@@ -11,23 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+  <div class="field text-center">
+    <label>Valor de despesa</label><br>
+    <%= f.text_field :amount, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control"  %>
   </div>
-  <div class="field">
-    <%= f.label :amount %><br>
-    <%= f.text_field :amount %>
+  <div class="field text-center">
+    <label>Categoria</label><br>
+    <%= f.text_field :category, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control"  %>
   </div>
-  <div class="field">
-    <%= f.label :category %><br>
-    <%= f.text_field :category %>
+  <div class="field text-center">
+    <label>Nome</label><br>
+    <%= f.text_field :name, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control"  %>
   </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <div class="actions  text-center">
+    
+<%= link_to 'Voltar', account_data_path,class:'btn btn-danger' , style: "color:white; border:none; margin-top:60px; width:30%; padding:13px; font-weight:bold; font-size:1.2em" %>
+    <%= f.submit 'Salvar', class: "btn btn-primary", style:"background-color:#678fa9; border:none; margin-top:60px; width:30%; padding:13px; font-weight:bold; font-size:1.2em" %>
+</div>
+
 <% end %>
