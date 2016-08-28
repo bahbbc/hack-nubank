@@ -5,6 +5,13 @@ class PlanningsController < ApplicationController
   # GET /plannings.json
   def index
     @plannings = Planning.all
+    fix_expense_value = @plannings.map{ |p| sum(p.value) if p.category == 'Gastos fixos'}
+    fix_expense_count = @plannings.map{ |p| count(p) if p.category == 'Gastos fixos'}
+    @fix_expense = (fix_expense_amount/fix_expense_count)*100
+
+    var_expense_value = @plannings.map{ |p| sum(p.value) if p.category == 'Gastos variáveis'}
+    var_expense_count = @plannings.map{ |p| count(p) if p.category == 'Gastos variáveis'}
+    @var_expense = (var_expense_value/var_expense_count)*100
   end
 
   def planning_details
