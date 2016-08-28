@@ -47,6 +47,9 @@ class ObjectivesController < ApplicationController
     @objective = Objective.new
   end
 
+  def add_credi_card
+    @objective = Objective.new
+  end
   # GET /objectives
   # GET /objectives.json
   def index
