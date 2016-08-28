@@ -28,8 +28,9 @@ class AccountDataController < ApplicationController
 
     respond_to do |format|
       if @account_datum.save
-        format.html { redirect_to @account_datum, notice: 'Account datum was successfully created.' }
-        format.json { render :show, status: :created, location: @account_datum }
+        UserMailer.welcome_email(@account_datum).deliver_later
+        format.html { redirect_to(@account_datum, notice: 'User was successfully created.') }
+        format.json { render json: @account_datum, status: :created, location: @account_datum }
       else
         format.html { render :new }
         format.json { render json: @account_datum.errors, status: :unprocessable_entity }
