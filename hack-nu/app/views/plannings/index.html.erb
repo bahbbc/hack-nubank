@@ -5,10 +5,40 @@
       <div class="col-xs-12">
         <div class="progress">
           <div class="progress-bar progress-bar-success progress-bar" role="progressbar" aria-valuenow="<%=@fix_expense%>" aria-valuemin="0" aria-valuemax="100" style="width: <%=@fix_expense%>%">
-            <%= @fix_expense"% Despesas fixas " %>
+            <%= "#{@fix_expense.round}% Despesas fixas " %>
             <span class="sr-only"><%=@fix_expense%></span>
           </div>
         </div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-success progress-bar" role="progressbar" aria-valuenow="<%=@var_expense%>" aria-valuemin="0" aria-valuemax="100" style="width: <%=@var_expense%>%">
+            <%= "#{@var_expense.round}% Despesas variáveis " %>
+            <span class="sr-only"><%=@var_expense%></span>
+          </div>
+        </div>
     </div>
+      <h2>Detalhamento das despesas fixas</h2>
+      <div class="col-xs-12">
+          <div class="progress">
+            <div class="progress-bar progress-bar-success progress-bar" role="progressbar" aria-valuenow="<%=@fix_expense%>" aria-valuemin="0" aria-valuemax="100" style="width: <%=@fix_expense%>%">
+              <%= "#{@fix_expense.round}% " %>
+              <span class="sr-only"><%=@fix_expense%></span>
+            </div>
+          </div>
+      </div>
+      <h2>Detalhamento das despesas variáveis</h2>
+      <div class="col-xs-12">
+        <div class="progress">
+          <div class="progress-bar progress-bar-success progress-bar" role="progressbar" aria-valuenow="<%=@fix_expense%>" aria-valuemin="0" aria-valuemax="100" style="width: <%=@fix_expense%>%">
+            <%= "#{@fix_expense.round}% Despesas fixas " %>
+            <span class="sr-only"><%=@fix_expense%></span>
+          </div>
+        </div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-success progress-bar" role="progressbar" aria-valuenow="<%=@var_expense%>" aria-valuemin="0" aria-valuemax="100" style="width: <%=@var_expense%>%">
+            <%= "#{@var_expense.round}% Despesas variáveis " %>
+            <span class="sr-only"><%=@var_expense%></span>
+          </div>
+        </div>
+      </div>
   </div>
 </div>
