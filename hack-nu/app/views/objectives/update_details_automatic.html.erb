@@ -1,0 +1,61 @@
+<div class="row" id="principal" style="margin-top:100px">
+	<div class="col-xs-12 ">
+		<h1 class="center-block" style="text-align:center; font-size:3em">Valor medio aproximado:</h1>
+	</div>
+	<div class="col-xs-12" style="text-align:center; font-size:2em">
+		<form>
+			<% if( @objective.name == 'Viajar') %>
+				<div class="form-group">
+		      		<h2>R$ 8.000,00</h2>
+		   	 	</div>
+	   	 	<% elsif( @objective.name == 'Comprar um carro') %>
+				<div class="form-group">
+		      		<h2>R$ 40.000,00</h2>
+		   	 	</div>
+	   	 	<% elsif( @objective.name == 'Comprar um imóvel') %>
+				<div class="form-group">
+		      		<h2>R$ 400.000,00</h2>
+		   	 	</div>
+	   	 	<% elsif( @objective.name == 'Fazer faculdade') %>
+				<div class="form-group">
+		      		<h2>R$ </h2>
+		   	 	</div>
+	   	 	<% elsif( @objective.name == 'Outro') %>
+				<div class="form-group">
+		      		<h2>R$ 10.000,00</h2>
+		   	 	</div>
+	   	 	<% end %>
+   	 		<div class="form-group">
+	      		<label for="disabledTextInput">Voce concorda?</label>
+	   	 	</div>
+	   	 	<div class="row">
+			   	<button id="idNao" class="btn btn-danger  col-sm-offset-4 col-xs-2" type="button" onclick="exibirInput();" >Nao</button>
+			   	<button type="submit" class="btn btn-primary col-sm-offset-1 col-xs-2">Sim</button>
+			</div>
+   	 	</form>
+	</div>
+</div>
+
+<div class="row" style="margin-top:100px">	
+	<div class="col-sm-offset-3 col-xs-6 text-center">
+	<form>
+		<div class="form-group" id="exibirInput" style="display:none">
+		      		<h1>Quanto voce acha que vai custar?</h1>
+		      		<input type="text" id="disabledTextInput" class="form-control" placeholder="">
+		      		<button type="submit" class="btn btn-primary">Continuar</button>
+		   	 	</div>
+	 	</div>
+ 	</form>
+</div>
+
+
+
+<script>
+function exibirInput()
+{
+	document.getElementById("exibirInput").style.display = "block";
+	document.getElementById("principal").style.display = "none";
+	principal
+}
+
+</script>

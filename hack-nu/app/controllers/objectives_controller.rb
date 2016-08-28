@@ -26,7 +26,14 @@ class ObjectivesController < ApplicationController
     @objective.update_attributes(details: params[:details])
     #redirect_to update_amount_objective_path
   end
+  
+  def update_details_automatic
+    @objective = Objective.last
 
+    @objective.update_attributes(details: params[:details])
+    #redirect_to update_amount_objective_path
+  end
+  
   def update_amount
     @objective = Objective.last
 
