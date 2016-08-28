@@ -5,7 +5,6 @@
 <table>
   <thead>
     <tr>
-      <th>E-mail </th>
       <th>Valor despesa</th>
       <th>Categoria</th>
       <th>Nome</th>
@@ -16,7 +15,6 @@
   <tbody>
     <% @account_data.each do |account_datum| %>
       <tr>
-        <td><%= account_datum.user_id %></td>
         <td><%= account_datum.amount %></td>
         <td><%= account_datum.category %></td>
         <td><%= account_datum.name %></td>

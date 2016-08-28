@@ -49,10 +49,13 @@ class ObjectivesController < ApplicationController
   def add_credit_card
     @objective = Objective.new
   end
-  
+
   def update
     @objective = Objective.find params[:id]
-    if @objective.update(objective_params)
+    if params[:save_edit]
+      @objective.update(objective_params)
+      redirect_to edit_objective_path(@objective)
+    elsif @objective.update(objective_params)
       redirect_to new_user_path
     end
   end
