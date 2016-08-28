@@ -1,31 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Account Data</h1>
+<h1>Detalhes dos gastos gerais</h1>
 
-<table>
-  <thead>
+<table class="table">
+  <thead class='list-group'>
     <tr>
-      <th>Valor despesa</th>
-      <th>Categoria</th>
-      <th>Nome</th>
-      <th colspan="3"></th>
+      <th scope="row">Nome</th>
+      <th scope="row">Valor despesa</th>
+      <th scope="row">Categoria</th>
     </tr>
   </thead>
 
   <tbody>
     <% @account_data.each do |account_datum| %>
       <tr>
+        <td><%= account_datum.name %></td>
         <td><%= account_datum.amount %></td>
         <td><%= account_datum.category %></td>
-        <td><%= account_datum.name %></td>
-        <td><%= link_to 'Show', account_datum %></td>
-        <td><%= link_to 'Edit', edit_account_datum_path(account_datum) %></td>
-        <td><%= link_to 'Destroy', account_datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Account datum', new_account_datum_path %>
+<%= link_to 'Voltar', plannings_path,class:'btn btn-danger' , style: "color:white; border:none; margin-top:60px; width:30%; padding:13px; font-weight:bold; font-size:1.2em" %>

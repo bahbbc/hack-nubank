@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160828102919) do
+ActiveRecord::Schema.define(version: 20160828122203) do
 
   create_table "account_data", force: :cascade do |t|
     t.float    "amount"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20160828102919) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
+    t.string   "email"
   end
 
   add_index "account_data", ["user_id"], name: "index_account_data_on_user_id"
