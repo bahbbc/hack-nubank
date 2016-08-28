@@ -1,0 +1,33 @@
+<div class="row" style="margin-top:30px">
+	<div class="col-xs-12 ">
+		<h1 class="center-block" style="text-align:center; font-size:3em">Conta Corrente</h1>
+	</div>
+	<div class="col-xs-12" style="text-align:center; font-size:2em">
+		
+	</div>
+</div>
+<div class="row">
+
+	<div class="col-xs-12 text-center">
+		<%= form_for(@objective) do |f| %>
+			<div class="form-group">
+	          <label for="disabledTextInput">Banco</label>
+	          <%= f.text_field :details, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
+	        </div>
+			<div class="form-group">
+	          <label for="disabledTextInput">Agencia</label>
+	          <%= f.text_field :details, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
+	        </div>
+	        <div class="form-group">
+	          <label for="disabledTextInput">Conta</label>
+	          <%= f.text_field :details, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
+	        </div>
+
+	        <div class="form-group">
+	          <label for="disabledTextInput">Senha</label>
+	          <%= f.text_field :details, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
+	        </div>
+	    <%= submit_tag 'Salvar', class: "btn btn-primary", style:"background-color:#678fa9; border:none; margin-top:60px; width:55%; padding:13px; font-weight:bold; font-size:1.2em" %>
+	    <% end %>
+	</div>		
+</div>
