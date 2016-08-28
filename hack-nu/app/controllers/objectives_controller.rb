@@ -5,7 +5,7 @@ class ObjectivesController < ApplicationController
   def new
     @objective = Objective.new
     puts "------------------------#{params[:commit]}-------------------"
-    if params[:commit]
+    if params[:travel]
       @objective.name = 'travel'
     elsif params[:car]
       @objective.name = 'car'
@@ -18,7 +18,7 @@ class ObjectivesController < ApplicationController
     end
 
     @objective.save
-    #redirect_to update_details_objective_path(@objective)
+    redirect_to update_details_objective_path(@objective)
   end
 
   def update_amount
@@ -60,7 +60,7 @@ class ObjectivesController < ApplicationController
     @objective = Objective.last
 
     @objective.update_attributes(details: params[:details])
-    redirect_to update_amount_objective_path
+    #redirect_to update_amount_objective_path
   end
 
   # DELETE /objectives/1
