@@ -1,6 +1,6 @@
 class ObjectivesController < ApplicationController
   # GET /objectives/new
-  before_action :set_objective, only: [:show, :edit, :update, :update_amount]
+  before_action :set_objective, only: [:show, :edit, :update, :update_amount, :update_details]
 
   def create
     @objective = Objective.new
@@ -24,13 +24,6 @@ class ObjectivesController < ApplicationController
     @objective = Objective.last
 
     @objective.update_attributes(details: params[:details])
-    #redirect_to update_amount_objective_path
-  end
-
-  def update_details
-    @objective = Objective.find params[:id]
-    puts "=====================#{params}"
-    /@objective.update(objective_params)/
     if @objective.name == 'Viajar'
       @objective.update_attributes(amount: 30_000)
     elsif @objective.name == 'Comprar um carro'
@@ -42,7 +35,11 @@ class ObjectivesController < ApplicationController
     else
       @objective.update_attributes(amount: params[:amount])
     end
-    /redirect_to user_path/
+    #redirect_to update_amount_objective_path
+  end
+
+  def update_details
+    @objective = Objective.find params[:id]
   end
 
   def new
@@ -50,6 +47,10 @@ class ObjectivesController < ApplicationController
   end
 
   def update
+    @objective = Objective.find params[:id]
+    if @objective.update(objective_params)
+      redirect_to update_details_objective_path(@objective)
+    end
   end
 
   # GET /objectives

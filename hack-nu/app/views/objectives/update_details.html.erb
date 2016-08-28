@@ -1,5 +1,4 @@
 <div class="row" style="margin-top:40px">
-
   <div class="col-xs-12 text-center">
     <%= form_for(@objective) do |f| %>
       <% if( @objective.name == 'Viajar') %>
@@ -32,9 +31,7 @@
         <label for="disabledTextInput">Quanto voce acha que vai custar?</label>
         <input style="width:90%; margin: 0 auto; padding: 20px" type="text" id="disabledTextInput" class="form-control" placeholder="">
         <%= link_to "Não sei, me diga!" , update_details_automatic_objective_path %>
-
       </div>
-      <%= submit_tag 'Continuar', class: "btn btn-primary", style:"background-color:#678fa9; border:none; margin-top:60px; width:55%; padding:13px; font-weight:bold; font-size:1.2em" %>
-    <% end %>
+    </div>
   </div>
 </div>
