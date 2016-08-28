@@ -71,6 +71,8 @@ class ObjectivesController < ApplicationController
 
   # GET /objectives/1/edit
   def edit
+    @objective = Objective.find params[:id]
+
   end
 
   # DELETE /objectives/1
