@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :account_data
 
-  root to: 'user#index', via: :get
+  root to: 'users#index', via: :get
+  resources :users
   resources :objectives do
     member do
       get 'update_amount'
