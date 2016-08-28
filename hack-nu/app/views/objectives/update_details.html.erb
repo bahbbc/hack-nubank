@@ -31,7 +31,8 @@
       <div class="form-group">
         <label for="disabledTextInput">Quanto voce acha que vai custar?</label>
         <input style="width:90%; margin: 0 auto; padding: 20px" type="text" id="disabledTextInput" class="form-control" placeholder="">
-        <a style="color:#7f7f7f; text-decoration:underline" href="">Não sei, me diga!</a>
+        <%= link_to "Não sei, me diga!" , update_details_automatic_objective_path %>
+
       </div>
       <%= submit_tag 'Continuar', class: "btn btn-primary", style:"background-color:#678fa9; border:none; margin-top:60px; width:55%; padding:13px; font-weight:bold; font-size:1.2em" %>
     <% end %>
