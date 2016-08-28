@@ -5,6 +5,17 @@ class PlanningsController < ApplicationController
   # GET /plannings.json
   def index
     @plannings = Planning.all
+    @account_data = AccountDatum.all
+    fix_expense_value = @plannings.inject(0){ |sum,p| (p.category == 'Gastos fixos') ? sum + p.value : sum}
+    fix_expense_count = @account_data.inject(0){ |sum,p| (p.category == 'Gastos fixos') ? sum + p.amount : sum}
+    p(fix_expense_value)
+    p(fix_expense_count)
+
+    @fix_expense = (fix_expense_count/fix_expense_value)*100
+
+    var_expense_value = @plannings.inject(0){ |sum,p| (p.category == 'Gastos variáveis') ? sum + p.value : sum}
+    var_expense_count = @account_data.inject(0){ |sum,p| (p.category == 'Gastos variáveis') ? sum + p.amount : sum }
+    @var_expense = (var_expense_count/var_expense_value)*100
   end
 
   def planning_details
