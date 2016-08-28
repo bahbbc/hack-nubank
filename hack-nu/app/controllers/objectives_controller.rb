@@ -80,13 +80,13 @@ class ObjectivesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_objective
-      @objective = Objective.last
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_objective
+    @objective = Objective.last
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def objective_params
-      params.require(:objective).permit(:name, :details, :amount, :time, :monthly_amount)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def objective_params
+    params.require(:objective).permit(:name, :details, :amount, :time, :monthly_amount)
+  end
 end

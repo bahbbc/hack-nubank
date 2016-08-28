@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :plannings
+
   resources :account_data
 
   root to: 'users#index', via: :get
