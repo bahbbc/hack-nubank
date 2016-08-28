@@ -1,2 +1,48 @@
-<h1>Detalhes Objetivo</h1>
 
+<div class="row" style="margin-top:100px">
+	<div class="col-xs-12 ">
+		<h2 class="center-block" style="text-align:center; font-size:3em">Qual o seu maior sonho?</h2>
+	</div>
+	<div class="col-xs-12" style="text-align:center; font-size:2em">
+		
+	</div>
+</div>
+
+<div class="row" style="margin-top:100px">
+	
+	<div class="col-sm-offset-3 col-xs-6 text-center">
+		<form>
+		<% if( @objective.name == 'Viajar') %>
+			<div class="form-group">
+	      		<label for="disabledTextInput">Para onde voce quer ir?</label>
+	      		<input type="text" id="disabledTextInput" class="form-control" placeholder="">
+	   	 	</div>
+	   	 	<% elsif( @objective.name == 'Comprar um carro') %>
+			<div class="form-group">
+	      		<label for="disabledTextInput">Qual carro voce quer?</label>
+	      		<input type="text" id="disabledTextInput" class="form-control" placeholder="">
+	   	 	</div>
+	   	 	<% elsif( @objective.name == 'Comprar um imóvel') %>
+			<div class="form-group">
+	      		<label for="disabledTextInput">Com que tipo de imovel voce sonha?</label>
+	      		<input type="text" id="disabledTextInput" class="form-control" placeholder="">
+	   	 	</div>
+	   	 	<% elsif( @objective.name == 'Fazer faculdade') %>
+			<div class="form-group">
+	      		<label for="disabledTextInput">O seu sonho e estudar o que e onde?</label>
+	      		<input type="text" id="disabledTextInput" class="form-control" placeholder="">
+	   	 	</div>
+	   	 	<% elsif( @objective.name == 'Outro') %>
+			<div class="form-group">
+	      		<label for="disabledTextInput">Nos conte um pouco melhor sobre isso?</label>
+	      		<input type="text" id="disabledTextInput" class="form-control" placeholder="">
+	   	 	</div>
+   	 	<% end %>
+   	 		<div class="form-group">
+	      		<label for="disabledTextInput">Quanto voce acha que vai custar?</label>
+	      		<input type="text" id="disabledTextInput" class="form-control" placeholder="">
+	   	 	</div>
+	   	<button type="submit" class="btn btn-primary">Continuar</button>
+	   	 </form>
+	</div>
+</div>
