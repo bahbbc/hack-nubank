@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :objectives do
     member do
       get 'update_amount'
+      get 'update_details'
     end
   end
 

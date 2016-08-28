@@ -3,10 +3,22 @@ class ObjectivesController < ApplicationController
   before_action :set_objective, only: [:show, :edit, :update, :update_amount]
 
   def new
-    @objective = Objective.new(objective_params)
+    @objective = Objective.new
+    puts "------------------------#{params[:commit]}-------------------"
+    if params[:commit]
+      @objective.name = 'travel'
+    elsif params[:car]
+      @objective.name = 'car'
+    elsif params[:house]
+      @objective.name = 'house'
+    elsif params[:faculty]
+      @objective.name = 'faculty'
+    else
+      @objective.name = 'other'
+    end
 
     @objective.save
-    redirect_to update_objective_path
+    redirect_to update_details_objective_path(@objective)
   end
 
   def update_amount
@@ -44,7 +56,7 @@ class ObjectivesController < ApplicationController
 
   # PATCH/PUT /objectives/1
   # PATCH/PUT /objectives/1.json
-  def update
+  def update_details
     @objective = Objective.last
 
     @objective.update_attributes(details: params[:details])

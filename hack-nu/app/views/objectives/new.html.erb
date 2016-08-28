@@ -2,12 +2,14 @@
 
 <div class="row">
   <div class="col-xs-12">
-    <div class="btn-group-vertical" role="group" aria-label="...">
-      <button type="button" class="btn btn-default navbar-btn">Viajar</button>
-      <button type="button" class="btn btn-default navbar-btn">Comprar um carro</button>
-      <button type="button" class="btn btn-default navbar-btn">Comprar um imóvel</button>
-      <button type="button" class="btn btn-default navbar-btn">Fazer faculdade</button>
-      <button type="button" class="btn btn-default navbar-btn">Outro</button>
+    <%= form_for(@objective) do |f| %>
+      <div class="btn-group-vertical" role="group" aria-label="...">
+        <%= f.submit 'Viajar', class: 'btn btn-default navbar-btn' %>
+        <%= f.submit 'Comprar um carro', name: 'car', class: 'btn btn-default navbar-btn' %>
+        <%= f.submit 'Comprar um imóvel', name: 'house', class: 'btn btn-default navbar-btn' %>
+        <%= f.submit 'Fazer faculdade', name: 'faculty', class: 'btn btn-default navbar-btn' %>
+        <%= f.submit 'Outro', class: 'btn btn-default navbar-btn' %>
+      </div>
     </div>
-  </div>
+    <% end %>
 </div>
