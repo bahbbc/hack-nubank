@@ -1,48 +1,42 @@
-
-<div class="row" style="margin-top:100px">
-	<div class="col-xs-12 ">
-		<h1 class="center-block" style="text-align:center; font-size:3em">Qual o seu maior sonho?</h1>
-	</div>
-	<div class="col-xs-12" style="text-align:center; font-size:2em">
-		
-	</div>
 </div>
 
-<div class="row" style="margin-top:100px">
+<div class="row" style="margin-top:40px">
 	
-	<div class="col-sm-offset-3 col-xs-6 text-center">
+	<div class="col-xs-12 text-center">
 		<form>
 		<% if( @objective.name == 'Viajar') %>
 			<div class="form-group">
-	      		<label for="disabledTextInput">Para onde voce quer ir?</label>
-	      		<input type="text" id="disabledTextInput" class="form-control" placeholder="">
+	      		<label style="text-align:right" for="disabledTextInput">Para onde voce quer ir?</label>
+	      		<input style="width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px" type="text" id="disabledTextInput" 
+	      		class="form-control" placeholder="">
 	   	 	</div>
 	   	 	<% elsif( @objective.name == 'Comprar um carro') %>
 			<div class="form-group">
-	      		<label for="disabledTextInput">Qual carro voce quer?</label>
-	      		<input type="text" id="disabledTextInput" class="form-control" placeholder="">
+	      		<label for="disabledTextInput">Qual carro você quer?</label>
+	      		<input style="width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px" type="text" id="disabledTextInput" class="form-control" placeholder="">
 	   	 	</div>
 	   	 	<% elsif( @objective.name == 'Comprar um imóvel') %>
 			<div class="form-group">
-	      		<label for="disabledTextInput">Com que tipo de imóvel voce sonha?</label>
-	      		<input type="text" id="disabledTextInput" class="form-control" placeholder="">
+	      		<label for="disabledTextInput">Que tipo de imóvel você deseja ter?</label>
+	      		<input style="width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px" type="text" id="disabledTextInput" class="form-control" placeholder="">
 	   	 	</div>
 	   	 	<% elsif( @objective.name == 'Fazer faculdade') %>
 			<div class="form-group">
 	      		<label for="disabledTextInput">O que você quer estudar e onde?</label>
-	      		<input type="text" id="disabledTextInput" class="form-control" placeholder="">
+	      		<input style="width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px" type="text" id="disabledTextInput" class="form-control" placeholder="">
 	   	 	</div>
 	   	 	<% elsif( @objective.name == 'Outro') %>
 			<div class="form-group">
 	      		<label for="disabledTextInput">Conte-nos o seu sonho:</label>
-	      		<input type="text" id="disabledTextInput" class="form-control" placeholder="">
+	      		<input style="width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px" type="text" id="disabledTextInput" class="form-control" placeholder="">
 	   	 	</div>
    	 	<% end %>
-   	 		<div class="form-group">
-	      		<label for="disabledTextInput">Quanto voce acha que vai custar?</label>
-	      		<input type="text" id="disabledTextInput" class="form-control" placeholder="">
+   	 		<div class="form-group" style="position: relative">
+	      		<label for="disabledTextInput">Quanto você acha que vai custar?</label>
+	      		<input style="width:90%; margin: 0 auto; padding: 20px" type="text" id="disabledTextInput" class="form-control" placeholder="">
+	      		<a style="color:#7f7f7f; text-decoration:underline" href="">Não sei, me diga!</a>
 	   	 	</div>
-	   	<button type="submit" class="btn btn-primary">Continuar</button>
+	   	<button style="background-color:#678fa9; border:none; margin-top:60px; width:55%; padding:13px; font-weight:bold; font-size:1.2em" type="submit" class="btn btn-primary">Continuar</button>
 	   	 </form>
 	</div>
 </div>
