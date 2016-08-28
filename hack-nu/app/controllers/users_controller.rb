@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     @user.save
+    redirect_to edit_objective_path(Objective.last)
   end
 
   def new
