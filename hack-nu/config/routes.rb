@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     member do
       get 'update_amount'
       get 'update_details'
+      get 'update_details_automatic'
     end
   end
 
