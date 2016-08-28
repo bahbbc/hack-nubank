@@ -12,20 +12,20 @@
   <div class="col-xs-12 text-center">
     <div class="form-group">
       <label for="disabledTextInput">Banco</label>
-      <%= text_field :details, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
+      <%= text_field :details, nil, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
     </div>
     <div class="form-group">
       <label for="disabledTextInput">Agencia</label>
-      <%= text_field :details, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
+      <%= text_field :details, nil, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
     </div>
     <div class="form-group">
       <label for="disabledTextInput">Conta</label>
-      <%= text_field :details, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
+      <%= text_field :details, nil,  style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
     </div>
 
     <div class="form-group">
       <label for="disabledTextInput">Senha</label>
-      <%= text_field :details, style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px", class: "form-control" %>
+      <%= password_field_tag :details, nil, class: "form-control", style: "width:90%; margin: 0 auto; padding: 20px; margin-bottom:30px" %>
     </div>
     <%= link_to 'Salvar', new_user_path, class: "btn btn-primary", style: "background-color:#678fa9; color:white; border:none; margin-top:20px; width:55%; padding:13px; font-weight:bold; font-size:1.2em" %>
   </div>
