@@ -18,7 +18,7 @@ class ObjectivesController < ApplicationController
     end
 
     @objective.save
-    redirect_to update_details_objective_path(@objective)
+    #redirect_to update_details_objective_path(@objective)
   end
 
   def update_amount
